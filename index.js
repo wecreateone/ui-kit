@@ -1,3 +1,6 @@
+export { default as BaseStyles } from "./base-styles";
+
+// Typography
 export { default as Atlas } from "./typography/atlas";
 export { default as Canon } from "./typography/canon";
 export { default as Trafalgar } from "./typography/trafalgar";
