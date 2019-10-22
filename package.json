@@ -1,0 +1,12 @@
+{
+	"name": "@wecreate/ui-kit",
+	"version": "0.0.1",
+	"description": "WeCreate's UI Kit",
+	"main": "index.js",
+	"repository": "git@github.com:wecreateone/ui-kit.git",
+	"author": "hstaab",
+	"license": "MIT",
+	"dependencies": {
+		"styled-jsx": "^3.2.2"
+	}
+}
