@@ -7,7 +7,11 @@ import {
 	ColorWhite,
 	ColorMintGreen,
 	ColorOrangeYellow,
-	ColorGhostWhite
+	ColorGhostWhite,
+	ColorLtGrey,
+	ColorJet,
+	ColorCoralRed,
+	ColorDarkJungle
 } from "./globals";
 
 export default css.global`
@@ -18,9 +22,6 @@ export default css.global`
 		/* Fonts */
 		--font-family-serif: ${FontSerif};
 		--font-family-sans: ${FontSans};
-
-		/* Transitions */
-		--transition-theme: ${TransitionThemeChange};
 
 		/* Spacing */
 		--standard-padding: 1rem;
