@@ -7,14 +7,16 @@
 	"author": "hstaab",
 	"license": "MIT",
 	"scripts": {
-		"build": "babel ./src --out-dir ./dist -s inline",
-		"test": "jest",
-		"prepublishOnly": "yarn build"
+		"prepublishOnly": "npm run release",
+		"release": "npm run build:dev && npm run build:prod",
+		"build:prod": "NODE_ENV=production rollup -c",
+		"build:dev": "NODE_ENV=development rollup -c"
 	},
 	"dependencies": {
 		"classnames": "^2.2.6"
 	},
 	"devDependencies": {
+		"@babel/cli": "^7.6.4",
 		"@babel/core": "^7.6.4",
 		"@babel/preset-env": "^7.6.3",
 		"@babel/preset-react": "^7.6.3",
@@ -31,6 +33,10 @@
 		"rollup-plugin-node-resolve": "^5.2.0",
 		"rollup-plugin-replace": "^2.2.0",
 		"styled-jsx": "^3.2.2"
+	},
+	"peerDependencies": {
+		"react": ">= 16.x.x",
+		"styled-jsx": ">= 3.x.x"
 	},
 	"files": [
 		"dist/*"

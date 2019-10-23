@@ -1,10 +1,14 @@
 import classNames from "classnames";
 
-import { Breakpoint_1, Breakpoint_2, Breakpoint_3 } from "../global-styles";
+import { Breakpoint_1, Breakpoint_2, Breakpoint_3 } from "./globals";
 
 export default Typography = ({ children, type }) => (
 	<>
-		<span className={classNames("typ-base", { "typ-atlas": type === "atlas" })}>
+		<span
+			className={classNames("typ-base", {
+				"typ-atlas": type === "atlas",
+			})}
+		>
 			{children}
 		</span>
 
@@ -163,11 +167,36 @@ export default Typography = ({ children, type }) => (
 						line-height: 30px;
 					}
 				}
+
+				/* Article body copy only */
+				.typ-body-copy {
+					font-size: 15px;
+					line-height: 20px;
+					font-family: var(--font-family-serif);
+				}
+
+				@media (min-width: ${Breakpoint_1}) {
+					.typ-body-copy {
+						font-size: 16px;
+						line-height: 22px;
+					}
+				}
+
+				@media (min-width: ${Breakpoint_2}) {
+					.typ-body-copy {
+						font-size: 18px;
+						line-height: 24px;
+					}
+				}
 			`}
 		</style>
 	</>
 );
 
 Typography.propTypes = {
-	type: PropTypes.string
+	type: PropTypes.string,
+};
+
+Typography.defaultProps = {
+	type: "",
 };
