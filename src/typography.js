@@ -7,6 +7,11 @@ export default Typography = ({ children, type }) => (
 		<span
 			className={classNames("typ-base", {
 				"typ-atlas": type === "atlas",
+				"typ-canon": type === "canon",
+				"typ-trafalgar": type === "trafalgar",
+				"typ-great-primer": type === "great-primer",
+				"typ-double-pica": type === "double-pica",
+				"typ-body-copy": type === "body-copy",
 			})}
 		>
 			{children}
